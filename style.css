@@ -2,3 +2,21 @@ body {
     background: rgb(63,94,251);
 background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
 }
+
+.board {
+    background-color: darkgrey;
+    border-radius: 25px 25px 25px 25px;
+    height: 800px;
+    width: 600px;
+    border: dashed 2px red;
+    opacity: 60%;
+    position: absolute;  
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -15px;
+}
+

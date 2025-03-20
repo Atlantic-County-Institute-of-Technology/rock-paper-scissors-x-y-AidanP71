@@ -8,7 +8,6 @@ background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100
     border-radius: 25px 25px 25px 25px;
     height: 800px;
     width: 700px;
-    border: dashed 2px black;
     opacity: 60%;
     position: absolute;  
 }
@@ -28,40 +27,89 @@ background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100
     width: 500px;
     left: 50%;
     translate: -50%;
-    border: dashed 2px black;
 }
 
-
+/*rock*/
 .button1 {
     border-radius: 50%;
-    background-color: red;
+    background-color: rgb(228, 134, 228);
     height: 100px;
     width: 100px;
     position: absolute;
     z-index: 2;
     margin-top: 120px;
-    margin-left: 200px;
+    margin-left: 690px;
 }
-
+/*paper*/
 .button2 {
     border-radius: 50%;
-    background-color: red;
+    background-color: rgb(228, 134, 228);
     height: 100px;
     width: 100px;
     position: absolute;
     z-index: 2;
     margin-top: 120px;
-    margin-left: 420px;
+    margin-left: 920px;
 }
-
+/*scissors*/
 .button3 {
     border-radius: 50%;
-    background-color: red;
+    background-color: rgb(228, 134, 228);
     height: 100px;
     width: 100px;
     position: absolute;
     z-index: 2;
     margin-top: 120px;
-    margin-left: 640px;
+    margin-left: 1140px;
+}
+/*reset*/
+.button4 {
+    background-color: rgb(228, 134, 228);
+    height: 50px;
+    width: 300px;
+    position: absolute;
+    z-index: 2;
+    margin-top: 700px;
+    margin-left: 820px;
+}
+/*computer chose*/
+#yopt {
+    position: absolute;
+    height: 200px;
+    width: 300px;
+    left: 660px;
+    top: 350px;
+    border: 2px dashed black;
+    text-align: center;
+}
+/*computer chose*/
+#copt {
+    position: absolute;
+    height: 200px;
+    width: 300px;
+    left: 980px;
+    top: 350px;
+    border: 2px dashed black;
+    text-align: center;
+}
+/*your score*/
+#yscore {
+    position: absolute;
+    height: 50px;
+    width: 300px;
+    left: 660px;
+    top: 560px;
+    border: 2px dashed black;
+    text-align: center;
+}
+/*computer score*/
+#cscore {
+    position: absolute;
+    height: 50px;
+    width: 300px;
+    left: 980px;
+    top: 560px;
+    border: 2px dashed black;
+    text-align: center;
 }
 

@@ -3,7 +3,7 @@ function getcopt() {
     const randomIndex = Math.floor(Math.random() * choices.length);
     return choices[randomIndex];
   }
-  
+  // produces "Its a tie as a result"
   function determineWinner(yopt, copt) {
     if (yopt === copt) {
       return "It's a tie!";
@@ -12,12 +12,13 @@ function getcopt() {
       (yopt === 'button2' && copt === 'button1') ||
       (yopt === 'button3' && copt === 'button2')
     ) {
+        //anything else results in "win" or "lose"
       return 'You win!';
     } else {
       return 'Computer wins!';
     }
   }
-  
+  //starts game and determines winner of game
   function playGame(yopt) {
     const copt = getcopt();
     const result = determineWinner(yopt, copt);

@@ -32,7 +32,7 @@ background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100
 }
 
 /*rock*/
-.button1 {
+.rock {
     border-radius: 50%;
     background-color: rgb(228, 134, 228);
     height: 100px;
@@ -41,9 +41,10 @@ background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100
     z-index: 2;
     margin-top: 120px;
     margin-left: 690px;
+    border: solid 1px black;
 }
 /*paper*/
-.button2 {
+.paper {
     border-radius: 50%;
     background-color: rgb(228, 134, 228);
     height: 100px;
@@ -52,9 +53,10 @@ background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100
     z-index: 2;
     margin-top: 120px;
     margin-left: 920px;
+    border: solid 1px black;
 }
 /*scissors*/
-.button3 {
+.scissors {
     border-radius: 50%;
     background-color: rgb(228, 134, 228);
     height: 100px;
@@ -63,6 +65,7 @@ background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100
     z-index: 2;
     margin-top: 120px;
     margin-left: 1140px;
+    border: solid 1px black;
 }
 /*reset*/
 .button4 {
@@ -73,9 +76,10 @@ background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100
     z-index: 2;
     margin-top: 700px;
     margin-left: 820px;
+    border: solid 1px black;
 }
 /*computer chose*/
-#yopt {
+#userchoice {
     position: absolute;
     height: 200px;
     width: 300px;
@@ -85,7 +89,7 @@ background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100
     text-align: center;
 }
 /*computer chose*/
-#copt {
+#computerchoice {
     position: absolute;
     height: 200px;
     width: 300px;
@@ -95,7 +99,7 @@ background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100
     text-align: center;
 }
 /*your score*/
-#yscore {
+#yourscore {
     position: absolute;
     height: 50px;
     width: 300px;
@@ -105,7 +109,7 @@ background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100
     text-align: center;
 }
 /*computer score*/
-#cscore {
+#computerscore {
     position: absolute;
     height: 50px;
     width: 300px;

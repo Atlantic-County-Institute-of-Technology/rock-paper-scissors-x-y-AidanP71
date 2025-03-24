@@ -9,30 +9,17 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="word">
-        <h1>Ultimate Rock, Paper, Scissors</h1>
-</div>
-        <div class="container">
-            <div class="board"></div>
-        </div>
-        <!--creates buttons 1,2, and 3-->
-    <div id="button_container" class="button_container">
-        <button id="button1" class="rock "><img src="assets/rock.png" alt="Rock" width="75" height="75"></button>
-    <button id="button2" class="paper "><img src="assets/paper.png" alt="Paper" width="75" height="75"></button>
-    <button id="button3" class="scissors "><img src="assets/scissors.png" alt="Scissors" width="75" height="75"></button>
-    </div>
-    <div>
-        <!--reset button-->
-    <button id="button4" class="button4"><h2 style="color: snow;">Reset Game</h2></button>
-    </div>
-        <div class="outputs">
-            <!--creates boxes for your score, computer score, what you chose, and what computer chose-->
-            <h1 class="output" id="userchoice"> <p style="color: black; font-size: 25px";> You Chose: </p></h1>
-            <h1 class="output" id="computerchoice"> <p style="color: black; font-size: 25px";> Computer Chose: </p></h1>
-            <h1 class="output" id="yourscore"> <p style="color: black; font-size: 25px";> Your Score: </p></h1>
-            <h1 class="output" id="computerscore"> <p style="color: black; font-size: 25px";> Computer Score: </p></h1>
-        </div>
-  
+
+    <h1>Ultimate Rock, Paper, Scissors</h1>
+
+    <div id="choices">
+        <button onclick="playGame('rock')">🪨</button>
+        <button onclick="playGame('paper')">📃</button>
+        <button onclick="playGame('scissors')">✂️</button>
+ </div>
+
+    
+    
 </body>
-<script src="script.js" ></script>
-</html
+    <script src="script.js"></script>
+</html>

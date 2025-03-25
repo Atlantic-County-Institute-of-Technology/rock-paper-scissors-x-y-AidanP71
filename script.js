@@ -1,38 +1,44 @@
-const choices = ["rock", "paper", "scissors"];
-const userchoice = document.getElementById("userchoice")
-const computerchoice = document.getElementById("computerchoice");
+const choices = ["rock", "paper", "scissors","printer", "water-bottle"];
+const playerChoice = document.getElementById("playerChoice")
+const computerchoice = document.getElementById("computerChoice");
 const resultDisplay = document.getElementById("resultDisplay");
 const playerScoreDisplay = document.getElementById("playerScoreDisplay");
 const computerScoreDisplay = document.getElementById("computerScoreDisplay");
 let playerScore = 0;
 let computerScore = 0;
 
-function playGame(userchoice){
-  const computerchoice = choices[Math.floor(Math.random() * 3)];
+function playGame(playerChoice){
+  const computerChoice = choices[Math.floor(Math.random() * 5)];
 
-  console.log(computerchoice);
+  console.log(computerChoice);
   let result = "";
 
-  if(playerchoice === computerchoice){
+  if(playerChoice === computerChoice){
     result = "IT'S A TIE!";
   }
   else{
-      switch(playerchoice){
+      switch(playerChoice){
         case "rock":
-            result = (computerchoice === "scissors") ? "YOU WIN!" : "YOU LOSE!;"
+            result = (computerChoice === "scissors" || computerChoice === "printer" || computerChoice === "water-bottle") ? "YOU WIN!" : "YOU LOSE!";
             break;
         case "paper":
-              result = (computerchoice === "rock") ? "YOU WIN!" : "YOU LOSE!;"
+              result = (computerChoice === "rock") ? "YOU WIN!" : "YOU LOSE!";
               break;
         case "scissors":
-                result = (computerchoice === "paper") ? "YOU WIN!" : "YOU LOSE!;"
+                result = (computerChoice === "paper" || computerChoice === "printer" || computerChoice === "water-bottle") ? "YOU WIN!" : "YOU LOSE!";
                 break;
+        case "printer":
+              result = (computerChoice === "paper") ? "YOU WIN!" : "YOU LOSE!";
+              break;
+        case "water-bottle":
+              result = (computerChoice === "printer" || computerChoice === "paper") ? "YOU WIN!" : "YOU LOSE!";
+              break;
       } 
   }
 
 
-    userchoice.textContent = 'You Chose: ${userchoice}' ;
-    computerchoice.textContent = 'Computer Chose: ${computerchoice}' ;
+    playerDisplay.textContent = `You Chose: ${playerChoice}` ;
+    computerDisplay.textContent = `Computer Chose: ${computerChoice}` ;
     resultDisplay.textContent = result;
 
     resultDisplay.classList.remove("greenText", "redText");

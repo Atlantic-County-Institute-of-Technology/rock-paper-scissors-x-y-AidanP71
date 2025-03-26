@@ -5,6 +5,7 @@ const computerchoice = document.getElementById("computerChoice");
 const resultDisplay = document.getElementById("resultDisplay");
 const playerScoreDisplay = document.getElementById("playerScoreDisplay");
 const computerScoreDisplay = document.getElementById("computerScoreDisplay");
+const resetButton = document.getElementById("Reset")
 let playerScore = 0;
 let computerScore = 0;
 //allows computer to choose from 5 options
@@ -58,4 +59,11 @@ function playGame(playerChoice){
             computerScoreDisplay.textContent = computerScore;
             break;  
     }
+    function resetGame() {
+      playerScore = 0;
+      computerScore = 0;
+      playerScoreDisplay.textContent = 0;
+      computerScoreDisplay.textContent = 0;
+    }
+    resetButton.addEventListener("click", resetGame)
 }

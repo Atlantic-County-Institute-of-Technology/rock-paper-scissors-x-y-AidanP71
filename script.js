@@ -1,3 +1,4 @@
+//creates choices for math.random, defines all js elements
 const choices = ["rock", "paper", "scissors","printer", "water-bottle"];
 const playerChoice = document.getElementById("playerChoice")
 const computerchoice = document.getElementById("computerChoice");
@@ -6,17 +7,18 @@ const playerScoreDisplay = document.getElementById("playerScoreDisplay");
 const computerScoreDisplay = document.getElementById("computerScoreDisplay");
 let playerScore = 0;
 let computerScore = 0;
-
+//allows computer to choose from 5 options
 function playGame(playerChoice){
   const computerChoice = choices[Math.floor(Math.random() * 5)];
 
   console.log(computerChoice);
   let result = "";
-
+//if what hte cpu and you chose equal each other ouput equals its a tie
   if(playerChoice === computerChoice){
     result = "IT'S A TIE!";
   }
   else{
+    //creates the outputs whether you win or lose
       switch(playerChoice){
         case "rock":
             result = (computerChoice === "scissors" || computerChoice === "printer" || computerChoice === "water-bottle") ? "YOU WIN!" : "YOU LOSE!";
@@ -36,19 +38,20 @@ function playGame(playerChoice){
       } 
   }
 
-
+// displays what you chose and what the computer chose
     playerDisplay.textContent = `You Chose: ${playerChoice}` ;
     computerDisplay.textContent = `Computer Chose: ${computerChoice}` ;
     resultDisplay.textContent = result;
 
     resultDisplay.classList.remove("greenText", "redText");
-    
+    //makes you win green, makes player score increase by 1
     switch(result){
         case "YOU WIN!":
           resultDisplay.classList.add("greenText");
           playerScore++;
           playerScoreDisplay.textContent = playerScore;
-          break;  
+          break; 
+        //makes you lose red, makes computer score increase by 1 
         case "YOU LOSE!":
             resultDisplay.classList.add("redText");
             computerScore++;

@@ -22,18 +22,23 @@ function playGame(playerChoice){
     //creates the outputs whether you win or lose
       switch(playerChoice){
         case "rock":
+          //rock beats scissors and printer
             result = (computerChoice === "scissors" || computerChoice === "printer" || computerChoice === "water-bottle") ? "YOU WIN!" : "YOU LOSE!";
             break;
         case "paper":
+          //paper beats rocks
               result = (computerChoice === "rock") ? "YOU WIN!" : "YOU LOSE!";
               break;
         case "scissors":
+          //scissors beats paper and printer
                 result = (computerChoice === "paper" || computerChoice === "printer" || computerChoice === "water-bottle") ? "YOU WIN!" : "YOU LOSE!";
                 break;
         case "printer":
+          //printer beats paper
               result = (computerChoice === "paper") ? "YOU WIN!" : "YOU LOSE!";
               break;
         case "water-bottle":
+          // if water-bottle selected it beats paper and printer
               result = (computerChoice === "printer" || computerChoice === "paper") ? "YOU WIN!" : "YOU LOSE!";
               break;
       } 
@@ -42,6 +47,7 @@ function playGame(playerChoice){
 // displays what you chose and what the computer chose
     playerDisplay.textContent = `You Chose: ${playerChoice}` ;
     computerDisplay.textContent = `Computer Chose: ${computerChoice}` ;
+    //displays results of both user and cpu
     resultDisplay.textContent = result;
 
     resultDisplay.classList.remove("greenText", "redText");
@@ -49,21 +55,25 @@ function playGame(playerChoice){
     switch(result){
         case "YOU WIN!":
           resultDisplay.classList.add("greenText");
+          //increases user score
           playerScore++;
           playerScoreDisplay.textContent = playerScore;
           break; 
         //makes you lose red, makes computer score increase by 1 
         case "YOU LOSE!":
             resultDisplay.classList.add("redText");
+            //increases computer score
             computerScore++;
             computerScoreDisplay.textContent = computerScore;
             break;  
     }
+    //resets score back to 0
     function resetGame() {
       playerScore = 0;
       computerScore = 0;
       playerScoreDisplay.textContent = 0;
       computerScoreDisplay.textContent = 0;
     }
+    //creates reset action
     resetButton.addEventListener("click", resetGame)
 }
